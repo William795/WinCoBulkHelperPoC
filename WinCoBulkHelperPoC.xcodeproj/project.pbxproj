@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922B7F5923D23DDD000FCBAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F5823D23DDD000FCBAA /* AppDelegate.swift */; };
+		922B7F5B23D23DDD000FCBAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F5A23D23DDD000FCBAA /* SceneDelegate.swift */; };
+		922B7F5D23D23DDD000FCBAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F5C23D23DDD000FCBAA /* ViewController.swift */; };
+		922B7F6023D23DDD000FCBAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B7F5E23D23DDD000FCBAA /* Main.storyboard */; };
+		922B7F6223D23DDF000FCBAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922B7F6123D23DDF000FCBAA /* Assets.xcassets */; };
+		922B7F6523D23DDF000FCBAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B7F6323D23DDF000FCBAA /* LaunchScreen.storyboard */; };
+		922B7F7023D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F6F23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift */; };
+		922B7F7B23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F7A23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		922B7F6C23D23DDF000FCBAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922B7F4D23D23DDC000FCBAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922B7F5423D23DDC000FCBAA;
+			remoteInfo = WinCoBulkHelperPoC;
+		};
+		922B7F7723D23DDF000FCBAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922B7F4D23D23DDC000FCBAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922B7F5423D23DDC000FCBAA;
+			remoteInfo = WinCoBulkHelperPoC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		922B7F5523D23DDD000FCBAA /* WinCoBulkHelperPoC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinCoBulkHelperPoC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922B7F5823D23DDD000FCBAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		922B7F5A23D23DDD000FCBAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		922B7F5C23D23DDD000FCBAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		922B7F5F23D23DDD000FCBAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		922B7F6123D23DDF000FCBAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		922B7F6423D23DDF000FCBAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		922B7F6623D23DDF000FCBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922B7F6B23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinCoBulkHelperPoCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		922B7F6F23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCoBulkHelperPoCTests.swift; sourceTree = "<group>"; };
+		922B7F7123D23DDF000FCBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922B7F7623D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinCoBulkHelperPoCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		922B7F7A23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCoBulkHelperPoCUITests.swift; sourceTree = "<group>"; };
+		922B7F7C23D23DDF000FCBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922B7F5223D23DDC000FCBAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F6823D23DDF000FCBAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F7323D23DDF000FCBAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		922B7F4C23D23DDC000FCBAA = {
+			isa = PBXGroup;
+			children = (
+				922B7F5723D23DDD000FCBAA /* WinCoBulkHelperPoC */,
+				922B7F6E23D23DDF000FCBAA /* WinCoBulkHelperPoCTests */,
+				922B7F7923D23DDF000FCBAA /* WinCoBulkHelperPoCUITests */,
+				922B7F5623D23DDD000FCBAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		922B7F5623D23DDD000FCBAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F5523D23DDD000FCBAA /* WinCoBulkHelperPoC.app */,
+				922B7F6B23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.xctest */,
+				922B7F7623D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922B7F5723D23DDD000FCBAA /* WinCoBulkHelperPoC */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F6623D23DDF000FCBAA /* Info.plist */,
+				922B7F8823D24027000FCBAA /* Resources */,
+				922B7F5C23D23DDD000FCBAA /* ViewController.swift */,
+				922B7F8923D24057000FCBAA /* Views */,
+			);
+			path = WinCoBulkHelperPoC;
+			sourceTree = "<group>";
+		};
+		922B7F6E23D23DDF000FCBAA /* WinCoBulkHelperPoCTests */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F6F23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift */,
+				922B7F7123D23DDF000FCBAA /* Info.plist */,
+			);
+			path = WinCoBulkHelperPoCTests;
+			sourceTree = "<group>";
+		};
+		922B7F7923D23DDF000FCBAA /* WinCoBulkHelperPoCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F7A23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift */,
+				922B7F7C23D23DDF000FCBAA /* Info.plist */,
+			);
+			path = WinCoBulkHelperPoCUITests;
+			sourceTree = "<group>";
+		};
+		922B7F8823D24027000FCBAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F5A23D23DDD000FCBAA /* SceneDelegate.swift */,
+				922B7F5823D23DDD000FCBAA /* AppDelegate.swift */,
+				922B7F6123D23DDF000FCBAA /* Assets.xcassets */,
+				922B7F6323D23DDF000FCBAA /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		922B7F8923D24057000FCBAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				922B7F5E23D23DDD000FCBAA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		922B7F5423D23DDC000FCBAA /* WinCoBulkHelperPoC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922B7F7F23D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoC" */;
+			buildPhases = (
+				922B7F5123D23DDC000FCBAA /* Sources */,
+				922B7F5223D23DDC000FCBAA /* Frameworks */,
+				922B7F5323D23DDC000FCBAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WinCoBulkHelperPoC;
+			productName = WinCoBulkHelperPoC;
+			productReference = 922B7F5523D23DDD000FCBAA /* WinCoBulkHelperPoC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		922B7F6A23D23DDF000FCBAA /* WinCoBulkHelperPoCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922B7F8223D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoCTests" */;
+			buildPhases = (
+				922B7F6723D23DDF000FCBAA /* Sources */,
+				922B7F6823D23DDF000FCBAA /* Frameworks */,
+				922B7F6923D23DDF000FCBAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922B7F6D23D23DDF000FCBAA /* PBXTargetDependency */,
+			);
+			name = WinCoBulkHelperPoCTests;
+			productName = WinCoBulkHelperPoCTests;
+			productReference = 922B7F6B23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		922B7F7523D23DDF000FCBAA /* WinCoBulkHelperPoCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922B7F8523D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoCUITests" */;
+			buildPhases = (
+				922B7F7223D23DDF000FCBAA /* Sources */,
+				922B7F7323D23DDF000FCBAA /* Frameworks */,
+				922B7F7423D23DDF000FCBAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922B7F7823D23DDF000FCBAA /* PBXTargetDependency */,
+			);
+			name = WinCoBulkHelperPoCUITests;
+			productName = WinCoBulkHelperPoCUITests;
+			productReference = 922B7F7623D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922B7F4D23D23DDC000FCBAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "William Moody";
+				TargetAttributes = {
+					922B7F5423D23DDC000FCBAA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					922B7F6A23D23DDF000FCBAA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 922B7F5423D23DDC000FCBAA;
+					};
+					922B7F7523D23DDF000FCBAA = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 922B7F5423D23DDC000FCBAA;
+					};
+				};
+			};
+			buildConfigurationList = 922B7F5023D23DDC000FCBAA /* Build configuration list for PBXProject "WinCoBulkHelperPoC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922B7F4C23D23DDC000FCBAA;
+			productRefGroup = 922B7F5623D23DDD000FCBAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922B7F5423D23DDC000FCBAA /* WinCoBulkHelperPoC */,
+				922B7F6A23D23DDF000FCBAA /* WinCoBulkHelperPoCTests */,
+				922B7F7523D23DDF000FCBAA /* WinCoBulkHelperPoCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922B7F5323D23DDC000FCBAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922B7F6523D23DDF000FCBAA /* LaunchScreen.storyboard in Resources */,
+				922B7F6223D23DDF000FCBAA /* Assets.xcassets in Resources */,
+				922B7F6023D23DDD000FCBAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F6923D23DDF000FCBAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F7423D23DDF000FCBAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922B7F5123D23DDC000FCBAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922B7F5D23D23DDD000FCBAA /* ViewController.swift in Sources */,
+				922B7F5923D23DDD000FCBAA /* AppDelegate.swift in Sources */,
+				922B7F5B23D23DDD000FCBAA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F6723D23DDF000FCBAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922B7F7023D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922B7F7223D23DDF000FCBAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922B7F7B23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		922B7F6D23D23DDF000FCBAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922B7F5423D23DDC000FCBAA /* WinCoBulkHelperPoC */;
+			targetProxy = 922B7F6C23D23DDF000FCBAA /* PBXContainerItemProxy */;
+		};
+		922B7F7823D23DDF000FCBAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922B7F5423D23DDC000FCBAA /* WinCoBulkHelperPoC */;
+			targetProxy = 922B7F7723D23DDF000FCBAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		922B7F5E23D23DDD000FCBAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922B7F5F23D23DDD000FCBAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		922B7F6323D23DDF000FCBAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922B7F6423D23DDF000FCBAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		922B7F7D23D23DDF000FCBAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		922B7F7E23D23DDF000FCBAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		922B7F8023D23DDF000FCBAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922B7F8123D23DDF000FCBAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		922B7F8323D23DDF000FCBAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WinCoBulkHelperPoC.app/WinCoBulkHelperPoC";
+			};
+			name = Debug;
+		};
+		922B7F8423D23DDF000FCBAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WinCoBulkHelperPoC.app/WinCoBulkHelperPoC";
+			};
+			name = Release;
+		};
+		922B7F8623D23DDF000FCBAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WinCoBulkHelperPoC;
+			};
+			name = Debug;
+		};
+		922B7F8723D23DDF000FCBAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F93N22S4T4;
+				INFOPLIST_FILE = WinCoBulkHelperPoCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "William-Moody.WinCoBulkHelperPoCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WinCoBulkHelperPoC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922B7F5023D23DDC000FCBAA /* Build configuration list for PBXProject "WinCoBulkHelperPoC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922B7F7D23D23DDF000FCBAA /* Debug */,
+				922B7F7E23D23DDF000FCBAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922B7F7F23D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922B7F8023D23DDF000FCBAA /* Debug */,
+				922B7F8123D23DDF000FCBAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922B7F8223D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922B7F8323D23DDF000FCBAA /* Debug */,
+				922B7F8423D23DDF000FCBAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922B7F8523D23DDF000FCBAA /* Build configuration list for PBXNativeTarget "WinCoBulkHelperPoCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922B7F8623D23DDF000FCBAA /* Debug */,
+				922B7F8723D23DDF000FCBAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922B7F4D23D23DDC000FCBAA /* Project object */;
+}
