@@ -17,10 +17,6 @@
 		92AC918523D7A96D00C402C9 /* ListCreatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC918423D7A96D00C402C9 /* ListCreatorViewModel.swift */; };
 		92CDE89823D25340001A56E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89723D25340001A56E5 /* Item.swift */; };
 		92CDE89C23D25508001A56E5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89B23D25508001A56E5 /* ListTableViewController.swift */; };
-		92CDE89E23D25622001A56E5 /* ListCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89D23D25622001A56E5 /* ListCreatorViewController.swift */; };
-		92CDE8A023D25702001A56E5 /* LCVC-Ext-CollectionCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89F23D25702001A56E5 /* LCVC-Ext-CollectionCells.swift */; };
-		92CDE8A423D25744001A56E5 /* LCVC-Ext-RowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE8A323D25744001A56E5 /* LCVC-Ext-RowPicker.swift */; };
-		92CDE8A923D276D5001A56E5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE8A823D276D5001A56E5 /* ListCollectionViewCell.swift */; };
 		92CDE8AB23D648A5001A56E5 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE8AA23D648A5001A56E5 /* Row.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +54,6 @@
 		92AC918423D7A96D00C402C9 /* ListCreatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCreatorViewModel.swift; sourceTree = "<group>"; };
 		92CDE89723D25340001A56E5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		92CDE89B23D25508001A56E5 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		92CDE89D23D25622001A56E5 /* ListCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCreatorViewController.swift; sourceTree = "<group>"; };
-		92CDE89F23D25702001A56E5 /* LCVC-Ext-CollectionCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCVC-Ext-CollectionCells.swift"; sourceTree = "<group>"; };
-		92CDE8A323D25744001A56E5 /* LCVC-Ext-RowPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCVC-Ext-RowPicker.swift"; sourceTree = "<group>"; };
-		92CDE8A823D276D5001A56E5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		92CDE8AA23D648A5001A56E5 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,10 +181,6 @@
 		92CDE8A523D25752001A56E5 /* ListCreator */ = {
 			isa = PBXGroup;
 			children = (
-				92CDE89D23D25622001A56E5 /* ListCreatorViewController.swift */,
-				92CDE89F23D25702001A56E5 /* LCVC-Ext-CollectionCells.swift */,
-				92CDE8A823D276D5001A56E5 /* ListCollectionViewCell.swift */,
-				92CDE8A323D25744001A56E5 /* LCVC-Ext-RowPicker.swift */,
 			);
 			path = ListCreator;
 			sourceTree = "<group>";
@@ -328,14 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92CDE8A923D276D5001A56E5 /* ListCollectionViewCell.swift in Sources */,
 				922B7F5923D23DDD000FCBAA /* AppDelegate.swift in Sources */,
 				92CDE89823D25340001A56E5 /* Item.swift in Sources */,
 				92AC918523D7A96D00C402C9 /* ListCreatorViewModel.swift in Sources */,
 				922B7F5B23D23DDD000FCBAA /* SceneDelegate.swift in Sources */,
-				92CDE8A423D25744001A56E5 /* LCVC-Ext-RowPicker.swift in Sources */,
-				92CDE8A023D25702001A56E5 /* LCVC-Ext-CollectionCells.swift in Sources */,
-				92CDE89E23D25622001A56E5 /* ListCreatorViewController.swift in Sources */,
 				92CDE8AB23D648A5001A56E5 /* Row.swift in Sources */,
 				92CDE89C23D25508001A56E5 /* ListTableViewController.swift in Sources */,
 			);
