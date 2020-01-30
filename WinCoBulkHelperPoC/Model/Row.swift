@@ -11,14 +11,14 @@ import Foundation
 class Row {
     
     var gravityBins: [Item]
-    var backBarrels: [Item]
-    var frontBarrels: [Item]
+    var barrels: [Item]
+    var rowNumber: String
     
-    init(gravityBins: [Item], backBarrels: [Item], frontBarrels: [Item]) {
+    init(gravityBins: [Item], barrels: [Item], rowNumber: String) {
         self.gravityBins = gravityBins
-        self.backBarrels = backBarrels
-        self.frontBarrels = frontBarrels
+        self.barrels = barrels
+        self.rowNumber = rowNumber
     }
 }
 
-let row1 = Row(gravityBins: [apple1, apple2, apple3], backBarrels: [apple4, apple5, apple6], frontBarrels: [apple7, apple8, apple9, apple10])
+let row1 = Row(gravityBins: [apple1, apple2, apple3], barrels: [apple4, apple5, apple6, apple7, apple8, apple9, apple10], rowNumber: "")

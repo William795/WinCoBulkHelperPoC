@@ -10,6 +10,9 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    
+    var itemList: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,31 +21,20 @@ class ListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        //maybe make this 2 sections(seperating gravbins from barrels)
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return itemList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = itemList[indexPath.row].displayName
+        cell.detailTextLabel?.text = itemList[indexPath.row].transportName
 
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
