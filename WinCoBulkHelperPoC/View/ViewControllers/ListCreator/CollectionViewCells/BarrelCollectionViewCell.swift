@@ -19,10 +19,21 @@ class BarrelCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func updateCell() {
+    @IBAction func switchHit(_ sender: Any) {
         guard let item = item else {return}
+        RowController.shared.currentList.append(item)
+    }
+    
+    func updateCell() {
+        guard let cellItem = item else {return}
         
-        barrelDisplayLabel.text = item.displayName
+        barrelDisplayLabel.text = cellItem.displayName
         barrelFillSwitch.isOn = false
+        
+        for item in RowController.shared.currentList {
+            if cellItem.displayName == item.displayName {
+                barrelFillSwitch.isOn = true
+            }
+        }
     }
 }

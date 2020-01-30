@@ -21,4 +21,5 @@ class Row {
     }
 }
 
-let row1 = Row(gravityBins: [apple1, apple2, apple3], barrels: [apple4, apple5, apple6, apple7, apple8, apple9, apple10], rowNumber: "")
+let row1 = Row(gravityBins: [apple1, apple2, apple3], barrels: [apple4, apple5, apple6, apple7, apple8, apple9, apple10], rowNumber: "1")
+let row2 = Row(gravityBins: [apple11, apple12, apple13], barrels: [apple14, apple15, apple16, apple17, apple18, apple19, apple20], rowNumber: "2")

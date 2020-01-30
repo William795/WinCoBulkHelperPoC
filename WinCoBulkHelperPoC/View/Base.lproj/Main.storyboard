@@ -154,7 +154,13 @@
                             <outlet property="delegate" destination="XIG-Kz-BXS" id="WTU-X1-WDq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Current List" id="iZV-E7-r9c"/>
+                    <navigationItem key="navigationItem" title="Current List" id="iZV-E7-r9c">
+                        <barButtonItem key="rightBarButtonItem" title="New List" id="y5P-Dk-7RG">
+                            <connections>
+                                <action selector="newListButton:" destination="XIG-Kz-BXS" id="fcU-Jv-IQd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0BW-Mf-e0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +245,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-Il-nNq">
                                                     <rect key="frame" x="50.5" y="97" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchHit:" destination="YjS-sN-S5u" eventType="valueChanged" id="YSp-fX-1fE"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>

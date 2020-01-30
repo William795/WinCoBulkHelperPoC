@@ -45,6 +45,4 @@ class RowDisplayViewController: UIViewController {
             destinationVC?.itemList = itemList
         }
     }
-    
-
 }

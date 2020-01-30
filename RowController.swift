@@ -22,7 +22,7 @@ class RowController {
     
     func addRowGravBins(row: Row, item: Item) {
         if row.gravityBins.last?.barcode == item.barcode {
-//            print("same item")
+            print("same item")
             return
         }
         row.gravityBins.append(item)
@@ -34,7 +34,7 @@ class RowController {
             print("same item")
             return
         }
-        row.gravityBins.append(item)
+        row.barrels.append(item)
     }
     
     
@@ -44,7 +44,13 @@ class RowController {
     }
     
     func setUpRowArray() {
+        rowOne = row1
+        rowTwo = row2
         rowArray.append(rowOne)
         rowArray.append(rowTwo)
+    }
+    
+    func clearCurrentList() {
+        currentList = []
     }
 }

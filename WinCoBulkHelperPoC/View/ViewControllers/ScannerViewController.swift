@@ -20,7 +20,7 @@ class ScannerViewController: UIViewController {
     var qrCodeFrameView: UIView?
     
     var rowNumber = ""
-
+    
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
                                       AVMetadataObject.ObjectType.code39Mod43,
@@ -34,10 +34,10 @@ class ScannerViewController: UIViewController {
                                       AVMetadataObject.ObjectType.dataMatrix,
                                       AVMetadataObject.ObjectType.interleaved2of5,
                                       AVMetadataObject.ObjectType.qr]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Get the back-facing camera for capturing videos
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
             print("Failed to get the camera device")
@@ -58,7 +58,7 @@ class ScannerViewController: UIViewController {
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
-//            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+            //            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
         } catch {
             // If any error occurs, simply print it out and don't continue any more.
@@ -88,74 +88,65 @@ class ScannerViewController: UIViewController {
             view.bringSubviewToFront(qrCodeFrameView)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Helper methods
-
-    //Repurpose to adding item to list
-//    func launchApp(decodedURL: String) {
-//
-//        if presentedViewController != nil {
-//            return
-//        }
-//
-//        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
-//        let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { (action) -> Void in
-//
-//            if let url = URL(string: decodedURL) {
-//                if UIApplication.shared.canOpenURL(url) {
-//                    UIApplication.shared.open(url)
-//                }
-//            }
-//        })
-//
-//        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
-//
-//        alertPrompt.addAction(confirmAction)
-//        alertPrompt.addAction(cancelAction)
-//
-//        present(alertPrompt, animated: true, completion: nil)
-//    }
     
-    
-  private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
-    layer.videoOrientation = orientation
-    videoPreviewLayer?.frame = self.view.bounds
-  }
-  
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    
-    if let connection =  self.videoPreviewLayer?.connection  {
-      let currentDevice: UIDevice = UIDevice.current
-      let orientation: UIDeviceOrientation = currentDevice.orientation
-      let previewLayerConnection : AVCaptureConnection = connection
-      
-      if previewLayerConnection.isVideoOrientationSupported {
-        switch (orientation) {
-        case .portrait:
-          updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
-          break
-        case .landscapeRight:
-          updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeLeft)
-          break
-        case .landscapeLeft:
-          updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
-          break
-        case .portraitUpsideDown:
-          updatePreviewLayer(layer: previewLayerConnection, orientation: .portraitUpsideDown)
-          break
-        default:
-          updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
-          break
+    func setItemLocation(item: Item, row: Row, itemName: String) {
+        
+        let alertController = UIAlertController(title: "Gravity Bin or Barrel?", message: itemName, preferredStyle: .alert)
+        
+        let gravBin = UIAlertAction(title: "Gravity Bin", style: .default) { (_) in
+            RowController.shared.addRowGravBins(row: row, item: item)
         }
-      }
+        let barrel = UIAlertAction(title: "Barrel", style: .default) { (_) in
+            RowController.shared.addRowBarrels(row: row, item: item)
+        }
+        
+        alertController.addAction(gravBin)
+        alertController.addAction(barrel)
+        self.present(alertController, animated: true, completion: nil)
     }
-  }
+    
+    
+    private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
+        layer.videoOrientation = orientation
+        videoPreviewLayer?.frame = self.view.bounds
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let connection =  self.videoPreviewLayer?.connection  {
+            let currentDevice: UIDevice = UIDevice.current
+            let orientation: UIDeviceOrientation = currentDevice.orientation
+            let previewLayerConnection : AVCaptureConnection = connection
+            
+            if previewLayerConnection.isVideoOrientationSupported {
+                switch (orientation) {
+                case .portrait:
+                    updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                    break
+                case .landscapeRight:
+                    updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeLeft)
+                    break
+                case .landscapeLeft:
+                    updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
+                    break
+                case .portraitUpsideDown:
+                    updatePreviewLayer(layer: previewLayerConnection, orientation: .portraitUpsideDown)
+                    break
+                default:
+                    updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                    break
+                }
+            }
+        }
+    }
 }
 
 extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
@@ -185,10 +176,9 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
                 
                 switch rowNumber {
                 case "Row 1":
-                    RowController.shared.addRowGravBins(row: RowController.shared.rowOne, item: itemScanned)
+                    setItemLocation(item: itemScanned, row: RowController.shared.rowOne, itemName: metadataObj.stringValue!)
                 case "Row 2":
-                    RowController.shared.addRowGravBins(row: RowController.shared.rowTwo, item: itemScanned)
-                    print("item added to row 2")
+                    setItemLocation(item: itemScanned, row: RowController.shared.rowTwo, itemName: metadataObj.stringValue!)
                 default:
                     print("no rownumber was hit")
                 }

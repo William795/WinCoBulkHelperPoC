@@ -25,9 +25,16 @@ class GravityBinCollectionViewCell: UICollectionViewCell {
     }
     
     func updateCell() {
-        guard let item = item else {return}
+        guard let cellItem = item else {return}
         
-        gravDisplayNameLabel.text = item.displayName
-        gravFillSwitch.isOn = false
+        gravDisplayNameLabel.text = cellItem.displayName
+        
+        for item in RowController.shared.currentList {
+            if cellItem.displayName == item.displayName {
+                gravFillSwitch.isOn = true
+                return
+            }
+            gravFillSwitch.isOn = false
+        }
     }
 }

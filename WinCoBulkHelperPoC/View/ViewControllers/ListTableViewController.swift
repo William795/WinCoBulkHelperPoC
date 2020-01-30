@@ -18,6 +18,10 @@ class ListTableViewController: UITableViewController {
         
     }
 
+    @IBAction func newListButton(_ sender: Any) {
+        RowController.shared.clearCurrentList()
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
