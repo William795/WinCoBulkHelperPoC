@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
     
     let displayName: String
     let transportName: String

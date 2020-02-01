@@ -14,7 +14,6 @@
 		922B7F6523D23DDF000FCBAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922B7F6323D23DDF000FCBAA /* LaunchScreen.storyboard */; };
 		922B7F7023D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F6F23D23DDF000FCBAA /* WinCoBulkHelperPoCTests.swift */; };
 		922B7F7B23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922B7F7A23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift */; };
-		92AC918523D7A96D00C402C9 /* ListCreatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC918423D7A96D00C402C9 /* ListCreatorViewModel.swift */; };
 		92AC918B23DA29EA00C402C9 /* RowDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC918A23DA29EA00C402C9 /* RowDisplayViewController.swift */; };
 		92AC918D23DA2BB100C402C9 /* CollectionView-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC918C23DA2BB000C402C9 /* CollectionView-Ext.swift */; };
 		92AC919023DA2FB600C402C9 /* GravityBinCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC918F23DA2FB600C402C9 /* GravityBinCollectionViewCell.swift */; };
@@ -24,6 +23,7 @@
 		92AC919B23DA5D4900C402C9 /* RowSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC919A23DA5D4900C402C9 /* RowSelectTableViewController.swift */; };
 		92AC919D23DA61B100C402C9 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC919C23DA61B100C402C9 /* StartingViewController.swift */; };
 		92AC91A123DA652900C402C9 /* RowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC91A023DA652900C402C9 /* RowPicker.swift */; };
+		92AC91A323E4CBB500C402C9 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AC91A223E4CBB500C402C9 /* ItemController.swift */; };
 		92CDE89823D25340001A56E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89723D25340001A56E5 /* Item.swift */; };
 		92CDE89C23D25508001A56E5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE89B23D25508001A56E5 /* ListTableViewController.swift */; };
 		92CDE8AB23D648A5001A56E5 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDE8AA23D648A5001A56E5 /* Row.swift */; };
@@ -60,7 +60,6 @@
 		922B7F7623D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinCoBulkHelperPoCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		922B7F7A23D23DDF000FCBAA /* WinCoBulkHelperPoCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCoBulkHelperPoCUITests.swift; sourceTree = "<group>"; };
 		922B7F7C23D23DDF000FCBAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92AC918423D7A96D00C402C9 /* ListCreatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCreatorViewModel.swift; sourceTree = "<group>"; };
 		92AC918A23DA29EA00C402C9 /* RowDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowDisplayViewController.swift; sourceTree = "<group>"; };
 		92AC918C23DA2BB000C402C9 /* CollectionView-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView-Ext.swift"; sourceTree = "<group>"; };
 		92AC918F23DA2FB600C402C9 /* GravityBinCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityBinCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		92AC919A23DA5D4900C402C9 /* RowSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSelectTableViewController.swift; sourceTree = "<group>"; };
 		92AC919C23DA61B100C402C9 /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
 		92AC91A023DA652900C402C9 /* RowPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowPicker.swift; sourceTree = "<group>"; };
+		92AC91A223E4CBB500C402C9 /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
 		92CDE89723D25340001A56E5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		92CDE89B23D25508001A56E5 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		92CDE8AA23D648A5001A56E5 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				922B7F5723D23DDD000FCBAA /* WinCoBulkHelperPoC */,
-				92AC919823DA585800C402C9 /* RowController.swift */,
 				922B7F6E23D23DDF000FCBAA /* WinCoBulkHelperPoCTests */,
 				922B7F7923D23DDF000FCBAA /* WinCoBulkHelperPoCUITests */,
 				922B7F5623D23DDD000FCBAA /* Products */,
@@ -128,7 +127,6 @@
 				922B7F8823D24027000FCBAA /* Resources */,
 				92CDE89523D2428B001A56E5 /* Model */,
 				922B7F8923D24057000FCBAA /* View */,
-				92CDE89423D2427E001A56E5 /* ViewModel */,
 			);
 			path = WinCoBulkHelperPoC;
 			sourceTree = "<group>";
@@ -167,6 +165,7 @@
 			children = (
 				922B7F5E23D23DDD000FCBAA /* Main.storyboard */,
 				92CDE89623D242D0001A56E5 /* ViewControllers */,
+				92AC91A423E4CFB200C402C9 /* ModelControllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,12 +188,13 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
-		92CDE89423D2427E001A56E5 /* ViewModel */ = {
+		92AC91A423E4CFB200C402C9 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92AC918423D7A96D00C402C9 /* ListCreatorViewModel.swift */,
+				92AC919823DA585800C402C9 /* RowController.swift */,
+				92AC91A223E4CBB500C402C9 /* ItemController.swift */,
 			);
-			path = ViewModel;
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 		92CDE89523D2428B001A56E5 /* Model */ = {
@@ -212,8 +212,8 @@
 				92AC919C23DA61B100C402C9 /* StartingViewController.swift */,
 				92CDE8A523D25752001A56E5 /* ListCreator */,
 				92CDE89B23D25508001A56E5 /* ListTableViewController.swift */,
-				92AC919623DA424200C402C9 /* ScannerViewController.swift */,
 				92AC919A23DA5D4900C402C9 /* RowSelectTableViewController.swift */,
+				92AC919623DA424200C402C9 /* ScannerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -361,11 +361,11 @@
 			files = (
 				92AC918B23DA29EA00C402C9 /* RowDisplayViewController.swift in Sources */,
 				92AC919923DA585800C402C9 /* RowController.swift in Sources */,
+				92AC91A323E4CBB500C402C9 /* ItemController.swift in Sources */,
 				922B7F5923D23DDD000FCBAA /* AppDelegate.swift in Sources */,
 				92AC919023DA2FB600C402C9 /* GravityBinCollectionViewCell.swift in Sources */,
 				92AC919D23DA61B100C402C9 /* StartingViewController.swift in Sources */,
 				92CDE89823D25340001A56E5 /* Item.swift in Sources */,
-				92AC918523D7A96D00C402C9 /* ListCreatorViewModel.swift in Sources */,
 				922B7F5B23D23DDD000FCBAA /* SceneDelegate.swift in Sources */,
 				92CDE8AB23D648A5001A56E5 /* Row.swift in Sources */,
 				92CDE89C23D25508001A56E5 /* ListTableViewController.swift in Sources */,

@@ -16,17 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IJ-TF-ZXm">
-                                <rect key="frame" x="161" y="272" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IJ-TF-ZXm">
+                                <rect key="frame" x="145" y="287.5" width="124" height="90"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Make new list"/>
                                 <connections>
                                     <segue destination="j0E-LJ-ucJ" kind="show" id="P0E-hi-Xz2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjC-mY-sIv">
-                                <rect key="frame" x="165" y="395" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjC-mY-sIv">
+                                <rect key="frame" x="145" y="572.5" width="124" height="90"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Set up Rows"/>
                                 <connections>
                                     <segue destination="l5g-Sx-4Pc" kind="show" id="pk6-79-pbh"/>
@@ -34,6 +36,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3IJ-TF-ZXm" firstAttribute="centerX" secondItem="bKj-lX-dXN" secondAttribute="centerX" id="6Xu-CK-PO8"/>
+                            <constraint firstItem="3IJ-TF-ZXm" firstAttribute="centerY" secondItem="bKj-lX-dXN" secondAttribute="centerY" multiplier="0.7" id="8Nq-zq-FEM"/>
+                            <constraint firstItem="3IJ-TF-ZXm" firstAttribute="height" secondItem="9vz-5o-8mB" secondAttribute="height" multiplier="0.1" id="I2D-MY-tPq"/>
+                            <constraint firstItem="EjC-mY-sIv" firstAttribute="centerY" secondItem="bKj-lX-dXN" secondAttribute="centerY" multiplier="1.3" id="N9o-fR-unb"/>
+                            <constraint firstItem="EjC-mY-sIv" firstAttribute="width" secondItem="9vz-5o-8mB" secondAttribute="width" multiplier="0.3" id="Nda-Ph-vdV"/>
+                            <constraint firstItem="3IJ-TF-ZXm" firstAttribute="width" secondItem="9vz-5o-8mB" secondAttribute="width" multiplier="0.3" id="THJ-eH-IXh"/>
+                            <constraint firstItem="EjC-mY-sIv" firstAttribute="centerX" secondItem="bKj-lX-dXN" secondAttribute="centerX" id="bAJ-Hs-hSX"/>
+                            <constraint firstItem="EjC-mY-sIv" firstAttribute="height" secondItem="9vz-5o-8mB" secondAttribute="height" multiplier="0.1" id="vzX-yT-Ij3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bKj-lX-dXN"/>
                     </view>
                     <navigationItem key="navigationItem" id="UO6-Fe-N7G"/>
@@ -77,7 +89,14 @@
                             <outlet property="delegate" destination="l5g-Sx-4Pc" id="JoH-BP-TdZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZEH-T2-MkE"/>
+                    <navigationItem key="navigationItem" id="ZEH-T2-MkE">
+                        <barButtonItem key="rightBarButtonItem" title="New Row" id="Ocy-bw-jB9">
+                            <connections>
+                                <action selector="newRowButton:" destination="l5g-Sx-4Pc" id="F0j-SW-U2j"/>
+                                <segue destination="6dM-AR-UtJ" kind="show" identifier="toScanFromNewRowSegue" id="CD3-Ob-wQz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSS-Lj-ntb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,18 +116,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWR-kt-Xii">
+                                <rect key="frame" x="341.5" y="106.5" width="62" height="72"/>
+                                <connections>
+                                    <action selector="addItemButton:" destination="6dM-AR-UtJ" eventType="touchUpInside" id="Vqf-V3-SIt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="CWR-kt-Xii" firstAttribute="height" secondItem="WUL-OI-62D" secondAttribute="height" multiplier="0.08" id="1t3-y0-OMh"/>
                             <constraint firstItem="QrG-7i-wfO" firstAttribute="centerY" secondItem="ZWV-jX-ZhI" secondAttribute="centerY" multiplier="1.7" id="5OL-ec-Ued"/>
+                            <constraint firstItem="CWR-kt-Xii" firstAttribute="centerY" secondItem="ZWV-jX-ZhI" secondAttribute="centerY" multiplier="0.3" id="DD3-vM-RFa"/>
+                            <constraint firstItem="CWR-kt-Xii" firstAttribute="centerX" secondItem="ZWV-jX-ZhI" secondAttribute="centerX" multiplier="1.8" id="JIm-Xe-9vc"/>
                             <constraint firstItem="QrG-7i-wfO" firstAttribute="centerX" secondItem="ZWV-jX-ZhI" secondAttribute="centerX" id="JM7-du-Ywz"/>
+                            <constraint firstItem="CWR-kt-Xii" firstAttribute="width" secondItem="WUL-OI-62D" secondAttribute="width" multiplier="0.15" id="gef-rS-SRl"/>
                             <constraint firstItem="QrG-7i-wfO" firstAttribute="width" secondItem="WUL-OI-62D" secondAttribute="width" id="vef-Ei-b6V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZWV-jX-ZhI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Y05-1H-OWn"/>
+                    <navigationItem key="navigationItem" id="Y05-1H-OWn">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name the row" textAlignment="natural" minimumFontSize="17" id="mXN-3v-M8V">
+                            <rect key="frame" x="148" y="5" width="118" height="34"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" title="Save Row" id="j8g-ei-sX9">
+                            <connections>
+                                <action selector="saveRow:" destination="6dM-AR-UtJ" id="faY-4Z-IW2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="manualBarcodeImputButton" destination="CWR-kt-Xii" id="saK-w7-yWm"/>
                         <outlet property="messageLabel" destination="QrG-7i-wfO" id="6YI-JB-wmK"/>
+                        <outlet property="rowNameTextField" destination="mXN-3v-M8V" id="Qrn-ze-l8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9O-yF-zFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,7 +315,7 @@
                                 </collectionReusableView>
                             </collectionView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ft-ga-Jhk">
-                                <rect key="frame" x="0.0" y="80" width="414" height="154"/>
+                                <rect key="frame" x="0.0" y="79.5" width="414" height="154.5"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -326,4 +370,7 @@
             <point key="canvasLocation" x="-1122" y="-125"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CD3-Ob-wQz"/>
+    </inferredMetricsTieBreakers>
 </document>

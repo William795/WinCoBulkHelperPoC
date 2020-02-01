@@ -13,7 +13,6 @@ class StartingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RowController.shared.setUpRowArray()
         // Do any additional setup after loading the view.
     }
     

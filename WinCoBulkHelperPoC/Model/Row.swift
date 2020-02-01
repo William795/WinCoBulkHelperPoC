@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Row {
+class Row: Codable {
     
     var gravityBins: [Item]
     var barrels: [Item]

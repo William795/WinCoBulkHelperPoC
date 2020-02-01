@@ -10,11 +10,16 @@ import UIKit
 
 class RowSelectTableViewController: UITableViewController {
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    @IBAction func newRowButton(_ sender: Any) {
+        
+    }
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,14 +38,26 @@ class RowSelectTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            RowController.shared.deleteRow(rowToDelete: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toScanSegue", let indexPath = tableView.indexPathForSelectedRow {
-            let rowNumber = RowController.shared.rowArray[indexPath.row].rowNumber
+            let row = RowController.shared.rowArray[indexPath.row]
             let destinationVC = segue.destination as? ScannerViewController
-            destinationVC?.rowNumber = rowNumber
+            destinationVC?.row = row
+        }
+        if segue.identifier == "toScanFromNewRowSegue" {
+            let row = Row(gravityBins: [], barrels: [], rowNumber: "newRow")
+            let destinationVC = segue.destination as? ScannerViewController
+            destinationVC?.row = row
         }
     }
 }

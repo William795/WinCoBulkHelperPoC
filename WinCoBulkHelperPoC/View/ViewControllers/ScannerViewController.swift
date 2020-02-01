@@ -13,13 +13,15 @@ class ScannerViewController: UIViewController {
     
     
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var rowNameTextField: UITextField!
+    @IBOutlet weak var manualBarcodeImputButton: UIButton!
     
     var captureSession = AVCaptureSession()
     
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     
-    var rowNumber = ""
+    var row: Row?
     
     private let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                                       AVMetadataObject.ObjectType.code39,
@@ -37,6 +39,8 @@ class ScannerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newRowCheck()
         
         // Get the back-facing camera for capturing videos
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
@@ -77,6 +81,7 @@ class ScannerViewController: UIViewController {
         
         // Move the message label and top bar to the front
         view.bringSubviewToFront(messageLabel)
+        view.bringSubviewToFront(manualBarcodeImputButton)
         
         // Initialize QR Code Frame to highlight the QR code
         qrCodeFrameView = UIView()
@@ -94,11 +99,96 @@ class ScannerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - New Row funtions
+    @IBAction func addItemButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Imput Barcode", message: "", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let searchAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            let textfield = alertController.textFields?.first
+            
+            if let item = ItemController.shared.searchForItemWith(barcode: textfield?.text ?? "") {
+                self.setItemLocation(item: item, row: self.row!)
+            } else {
+                self.manualBarCodeImputAlertController()
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(searchAction)
+        alertController.addTextField { (textfield) in
+            textfield.placeholder = "Type barcode here"
+            textfield.keyboardType = .numberPad
+        }
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func manualBarCodeImputAlertController() {
+        let alertController = UIAlertController(title: "Nothing Found", message: "Try again?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let searchAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            let textfield = alertController.textFields?.first
+            
+            if let item = ItemController.shared.searchForItemWith(barcode: textfield?.text ?? "") {
+                self.setItemLocation(item: item, row: self.row!)
+            } else {
+                self.manualBarCodeImputAlertController()
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(searchAction)
+        alertController.addTextField { (textfield) in
+            textfield.placeholder = "Type barcode here"
+            textfield.keyboardType = .numberPad
+        }
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func itemCreationAlertControllerWith(barCode: String) {
+        let alertController = UIAlertController(title: "No Item found", message: "make new item?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            let nameTextfield = alertController.textFields?[0]
+            let transportNameTextField = alertController.textFields?[1]
+            
+            if nameTextfield?.text?.isEmpty ?? true || transportNameTextField?.text?.isEmpty ?? true {
+                self.itemCreationAlertControllerWith(barCode: barCode)
+            } else {
+                let item = Item(displayName: nameTextfield!.text!, transportName: transportNameTextField!.text!, barcode: barCode)
+                self.setItemLocation(item: item, row: self.row!)
+                ItemController.shared.addToItemList(item: item)
+            }
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(addAction)
+        alertController.addTextField { (textfield) in
+            textfield.placeholder = "Display Name"
+            textfield.keyboardType = .default
+        }
+        alertController.addTextField { (textfield) in
+            textfield.placeholder = "Storage Name"
+            textfield.keyboardType = .default
+        }
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveRow(_ sender: Any) {
+        guard let row = row else {return}
+        row.rowNumber = rowNameTextField.text ?? ""
+        RowController.shared.saveToPersistntStore()
+    }
+    
+    func newRowCheck() {
+        if row?.rowNumber == "newRow" {
+            guard let row = row else { return }
+            RowController.shared.addRow(row: row)
+        }
+    }
+    
+    
     // MARK: - Helper methods
     
-    func setItemLocation(item: Item, row: Row, itemName: String) {
+    func setItemLocation(item: Item, row: Row) {
         
-        let alertController = UIAlertController(title: "Gravity Bin or Barrel?", message: itemName, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Gravity Bin or Barrel?", message: item.displayName, preferredStyle: .alert)
         
         let gravBin = UIAlertAction(title: "Gravity Bin", style: .default) { (_) in
             RowController.shared.addRowGravBins(row: row, item: item)
@@ -172,17 +262,12 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
                 messageLabel.text = metadataObj.stringValue
                 
                 //search data base for item
-                let itemScanned = Item(displayName: "Listed name", transportName: "Something from database", barcode: metadataObj.stringValue!)
-                
-                switch rowNumber {
-                case "Row 1":
-                    setItemLocation(item: itemScanned, row: RowController.shared.rowOne, itemName: metadataObj.stringValue!)
-                case "Row 2":
-                    setItemLocation(item: itemScanned, row: RowController.shared.rowTwo, itemName: metadataObj.stringValue!)
-                default:
-                    print("no rownumber was hit")
+                if let itemScanned = ItemController.shared.searchForItemWith(barcode: metadataObj.stringValue!) {
+                    guard let row = row else {return}
+                    setItemLocation(item: itemScanned, row: row)
+                } else {
+                    itemCreationAlertControllerWith(barCode: metadataObj.stringValue!)
                 }
-                
             }
         }
     }
