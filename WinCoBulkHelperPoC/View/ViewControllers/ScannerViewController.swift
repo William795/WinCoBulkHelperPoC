@@ -99,7 +99,6 @@ class ScannerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - New Row funtions
     @IBAction func addItemButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Imput Barcode", message: "", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
@@ -174,11 +173,14 @@ class ScannerViewController: UIViewController {
         guard let row = row else {return}
         row.rowNumber = rowNameTextField.text ?? ""
         RowController.shared.saveToPersistntStore()
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func newRowCheck() {
         if row?.rowNumber == "newRow" {
             guard let row = row else { return }
+            row.rowNumber = "Row"
             RowController.shared.addRow(row: row)
         }
     }
