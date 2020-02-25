@@ -163,7 +163,7 @@ class ScannerViewController: UIViewController {
             textfield.keyboardType = .default
         }
         alertController.addTextField { (textfield) in
-            textfield.placeholder = "Storage Name"
+            textfield.placeholder = "Storage Container"
             textfield.keyboardType = .default
         }
         present(alertController, animated: true, completion: nil)

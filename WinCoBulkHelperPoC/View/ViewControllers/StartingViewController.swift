@@ -13,7 +13,13 @@ class StartingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //mock data if rows are empty
+        if RowController.shared.rowArray.isEmpty {
+            RowController.shared.addRow(row: row1)
+            RowController.shared.addRow(row: row2)
+            RowController.shared.addRow(row: row3)
+            RowController.shared.addRow(row: row4)
+        }
     }
     
 
